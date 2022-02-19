@@ -38,7 +38,7 @@ const calculateWinner=()=> {
 useEffect(()=>{
 const winner = calculateWinner();
 if(winner){
-  alert("Yayyy!..."`${winner}`+" is the winner")
+  alert("Yayyy!..." +`${winner}`+" is the winner")
   updateGameState(initialState)
 }
 }, [gameState])
@@ -53,8 +53,6 @@ if(winner){
           <SquareComponent className =" b-bottom-right" state ={gameState[0]} onClick ={()=>squareClicked(0)}/>
           <SquareComponent className =" b-bottom-right" state ={gameState[1]} onClick ={()=>squareClicked(1)}/>
           <SquareComponent className="b-bottom" state ={gameState[2]} onClick ={()=>squareClicked(2)}/>
-          
-
         </div>
         <div className='row jc-center'>
         <SquareComponent className =" b-bottom-right" state ={gameState[3]} onClick ={()=>squareClicked(3)}/>
